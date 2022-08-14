@@ -40,9 +40,9 @@ public class MemberController {
     //
     @GetMapping("/members")
     public String list(Model model){
+        //List형태로 모든 회원을 조회 후 model객체에 저장
         List<Member> members = memberService.findMembers();
         model.addAttribute("members",members);
-
         return "members/memberList";
     }
 }

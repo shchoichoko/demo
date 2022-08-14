@@ -1,24 +1,37 @@
 package com.bookReview.demo;
 
-import com.bookReview.demo.repository.MemberRepository;
-import com.bookReview.demo.repository.MemoryMemberRepository;
+import com.bookReview.demo.repository.*;
 import com.bookReview.demo.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.persistence.EntityManager;
+import javax.sql.DataSource;
+
 @Configuration
 public class SpringConfig {
-    //멤버 서비스 빈으로 등록
+
+    private EntityManager em;
+
+    @Autowired
+    public SpringConfig(EntityManager em) {
+        this.em = em;
+    }
+
+    //    private final DataSource dataSource;
+//    public SpringConfig(DataSource dataSource) {
+//        this.dataSource = dataSource;
+//    }
     @Bean
-    public MemberService memberService(){
+    public MemberService memberService() {
         return new MemberService(memberRepository());
     }
-
-    //멤버 저장소 빈으로 등록
     @Bean
-    public MemberRepository memberRepository(){
-        return new MemoryMemberRepository();
-
+    public MemberRepository memberRepository() {
+// return new MemoryMemberRepository();
+// return new JdbcMemberRepository(dataSource);
+// return new JdbcTemplateMemberRepository(dataSource);
+        return new JpaMemberRepository(em);
     }
-
 }
