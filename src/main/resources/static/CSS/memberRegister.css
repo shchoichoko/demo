@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+    right: 20px;
+
+}
+a{text-decoration: none;}
+#signUp>ul>li{
+    float: left;
+    margin: 5px;
+    margin-left: 20px;
+}
+#signUp>ul{
+    overflow: hidden;
+    position: absolute;
+    right:20px;
+
+}
+#signUp>ul>li>a>p{
+    padding:3px;
+    font-size: 1.5em;
+    color: #3f4040;
+    font-family: 'Cute Font', cursive;
+}
+
+#biggest{
+    width: 1100px;
+    margin: 0 auto;
+/*    height: 960px;*/
+/*    border: 1px solid tomato;*/
+    box-sizing: border-box;
+}
+#header{                                    /*  메뉴 다는 곳!!!  */
+    display: block;
+    width: 1100px;
+    height:120px;
+    background-color: #f2e9e1;
+    box-sizing: border-box;
+    position: relative;
+
+
+}
+
+#signUp>ul>li>a>p:hover{
+    color:#ABD0CE;
+}
+
+
+
+b{
+    color: red;
+}
+label{
+    display: block;
+    margin-bottom:10px;
+    margin-top: 5px;
+}
+#container{
+    width: 950px;
+    height: 850px;
+    padding-left: 40%;
+    margin: 0 auto;
+/*    margin-top: 0px;*/
+    clear: left;
+/*    border:1px solid black;*/
+}
+#idbox input{
+    width: 180px;
+    height: 30px;
+    border-radius: 8px;
+}
+#nameBox input{
+    width: 180px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+#password input{
+    width: 180px;
+    height: 30px;
+    border-radius: 8px;
+}
+#passwordChk input{
+    width: 180px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+#forfloat input{
+    width: 180px;
+    height: 30px;
+    border-radius: 8px;
+    clear:both;
+
+}
+#forfloat{
+    float: left;
+
+}
+
+#forfloat select{
+    height: 30px;
+    border-radius: 8px;
+}
+#num{
+    clear: left;
+    margin-top: 70px;
+}
+#num input{
+    height: 30px;
+    width: 180px;
+    border-radius: 8px;
+}
+#addressBox input{
+
+
+}
+
+#mas{
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.tablewidth{
+    padding-left : 50px;
+}
+table{
+ /*
+    width: 500px;
+    margin-bottom: 10px;
+    float: right;
+    box-sizing: border-box;
+    height: 430px;
+    */
+}
+.dogName>td{
+    text-align: center;
+}
+.dogName>td>b{
+    color: #1F2124;
+
+}
+#bigPic{
+    border: 1px solid black;
+    width: 440px;
+    height: 540px;
+    float: left;
+}
+
+
+.dogtab{
+    margin: 10px;
+}
+
+#submit input{
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+}
+

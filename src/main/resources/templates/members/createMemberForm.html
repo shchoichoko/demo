@@ -1,13 +1,94 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Study">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Steve">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/memberRegister.css">
+</head>
 <body>
 <div class="container">
     <form action="/members/new" method="post">
-        <div class="form-group">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+        <div id="container">
+
+            <div id="nameBox">
+                <p>
+                    <label for="nameFocus"><b>*</b>이름(최대 6자)</label>
+                </p>
+                <input type="text" name="name" id="nameFocus" size="10"
+                       maxlength="6" required>
+            </div>
+
+            <div id="idbox">
+                <p>
+                    <label for="idfocus"><b>*</b>아이디(최대 8자)</label>
+                </p>
+                <input type="text" name="id" id="idfocus" size="10" maxlength="15"
+                       required>
+            </div>
+
+            <div id="password">
+                <p>
+                    <label for="pw"><b>*</b>비밀번호(최대 10자)</label>
+                </p>
+                <input type="password" name="pw" id="pw" size="10" maxlength="10"
+                       required>
+            </div>
+            <div id="passwordChk">
+                <p>
+                    <label for="pw2"><b>*</b>비밀번호 확인</label>
+                </p>
+                <input type="password" name="passwordCheck" id="pw2" size="10"
+                       maxlength="10" required>
+            </div>
+
+            <div id="email">
+
+                <p>
+                    <label for="mail"><b>*</b>이메일</label>
+                </p>
+                <div id="forfloat">
+                    <input type="email" name="email" id="mail" size="10"
+                           maxlength="25" required>
+                </div>
+
+            </div>
+            <div id="num">
+                <p>
+                    <label for="number"><b>*</b>휴대전화 번호(숫자만)</label>
+                </p>
+                <input type="tel" name="cellphone" id="number" size="10"
+                       maxlength="11" required>
+            </div>
+            <br>
+            <div id="mas">
+                <span><b>*</b>흥미있는 장르를 골라주세요.</span>
+            </div>
+            <div id="bookTable">
+                <table>
+                    <tr>
+                        <td class="tableWidth"><input type="radio" name="mascot" value="philosophy" id="philosophy">
+                            <label for="philosophy"><strong>철학</strong></label></td>
+
+                        <td class="tableWidth"><input type="radio" name="mascot" value="religion" id="religion">
+                            <label for="religion"><strong>종교</strong></label></td>
+
+                        <td class="tableWidth"><input type="radio" name="mascot" value="socialScience" id="socialScience">
+                            <label for="socialScience"><strong>사회 과학</strong></label></td>
+
+                        <td class="tableWidth"><input type="radio" name="mascot" value="pureScience" id="pureScience"><label
+                                for="pureScience"><strong>순수 과학</strong></label></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div id="submit">
+                <input type="submit" value="등록">
+
+            </div>
         </div>
-        <button type="submit">등록</button>
     </form>
 </div> <!-- /container -->
 </body>
